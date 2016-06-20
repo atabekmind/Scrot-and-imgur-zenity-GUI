@@ -57,19 +57,8 @@ use_scrot() {
 }
 
 read_conf
-mode=$(ask_mode)
-case "$mode" in
-	"$opt_clickdrag")
-		upload=$(ask_upload)
-		use_scrot "$upload" "-s"
-		;;
-	"$opt_now")
-		upload=$(ask_upload)
-		use_scrot "$upload" "-d 1"
-		;;
-	"$opt_delay")
-		upload=$(ask_upload)
-		delay=$(ask_delay)
-		use_scrot "$upload" "-d $delay"
-		;;
-esac
+#mode=$(ask_mode)
+upload=$(ask_upload)
+use_scrot "$upload" "-s"
+
+
